@@ -12,7 +12,12 @@
 </head>
 <body>
 <div id="header">
-	<p><a href=?c=pause>Pause</a> <a href=?c=next>Next</a> <a href=?c=love>Love</a> <a href=?c=ban>Ban</a> <a href=?c=tired>Tired</a> <a href=# onclick="explainSong();return false">Explain</a></p>
+	<p><button href=?c=pause>Pause</button>
+	    <button href=?c=next>Next</button> 
+	    <button href=?c=love>Love</button> 
+	    <button href=?c=ban>Ban</button> 
+	    <button href=?c=tired>Tired</button> 
+	    <button href=# onclick="explainSong();return false">Explain</button></p>
 	<p>
 	<select name="stationselect">
 		<option>Change Station</option>
@@ -42,7 +47,7 @@
 			var id = $('select[name=stationselect]').val();
 			$.get("api", {json:JSON.stringify({"method":"ChangeStation", "id":1, "stationID":id})}).done(function()
 				{
-					window.setTimeout(function(){location.reload();}, 3000);
+					window.setTimeout(function(){location.reload();}, 10000);
 				});
 		});
 	});
