@@ -35,14 +35,12 @@
 $(function(){
   $(".btn").live('mousedown', function() {
       this.src = this.src.replace("_off","_on");
+      setTimeout(function(this) {
+      	this.src = this.src.replace("_on","_off")},400,this);
+  })
 
   });
-    $(".btn").live('mouseup', function() {
-    this.src = this.src.replace("_on","_off");
-
-  });
-});
-	</script>
+</script>
 </head>
 <body>
 <div id="header">
