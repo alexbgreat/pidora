@@ -33,10 +33,11 @@
 	});
 
 $(function(){
-  $(".btn").live('mousedown', function() {
+  $(".btn").live('click', function() {
       this.src = this.src.replace("_off","_on");
       setTimeout(function(t){
       	t.src = t.src.replace("_on","_off")},400,this);
+      setTimeout(update_song(),1000);
   })
 
   });
