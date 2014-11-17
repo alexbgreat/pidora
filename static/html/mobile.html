@@ -31,18 +31,24 @@
 	jQuery(document).ready(function () {
 	setInterval('update_song()', 5000);
 	});
+
+$(function(){
+  $("input").live('mousedown', function() {
+      this.src = this.src.replace("_off","_on");
+    $(this).toggleClass("on");
+
+  });
+    $("input").live('mouseup', function() {
+    this.src = this.src.replace("_on","_off");
+    $(this).toggleClass("on");
+
+  });
+});
 	</script>
 </head>
 <body>
 <div id="header">
-	<p><button onclick="$.ajax('/mobile?c=pause')">Pause</button>
-	    <button onclick="$.ajax('/mobile?c=next')">Next</button> 
-	    <button onclick="$.ajax('/mobile?c=love')">Love</button> 
-	    <button onclick="$.ajax('/mobile?c=ban')">Ban</button> 
-	    <button onclick="$.ajax('/mobile?c=tired')">Tired</button> 
-	    <button onclick="explainSong();return false">Explain</button>
-	<button onclick="$.ajax('/mobile?c=volumeup')">Volume Up</button> 
-<button onclick="$.ajax('/mobile?c=volumedown')">Volume Down</button> </p>
+	
 	<p>
 	<select name="stationselect">
 		<option>Change Station</option>
@@ -59,6 +65,15 @@
 	<div id="album">{SONGALBUM}</div>
 
 	<img class="displayed" id="albumart" src="{SONGARTURL}" width="350" height="350" alt="{ALBUMARTALT}" />
+
+	<p><input type="image" src="/imgs/pause_off.png" onclick="$.ajax('/mobile?c=pause')">Pause</input>
+	    <input type="image" src="/imgs/next_off.png" onclick="$.ajax('/mobile?c=next')">Next</input> 
+	    <input type="image" src="/imgs/love_off.png" onclick="$.ajax('/mobile?c=love')">Love</input> 
+	    <input type="image" src="/imgs/ban_off.png" onclick="$.ajax('/mobile?c=ban')">Ban</input> 
+	    <input type="image" src="/imgs/tired_off.png" onclick="$.ajax('/mobile?c=tired')">Tired</input> <br/>
+	<input type="image" src="/imgs/volup_off.png" onclick="$.ajax('/mobile?c=volumeup')">Volume Up</input> 
+<input type="image" src="/imgs/voldn_off.png" onclick="$.ajax('/mobile?c=volumedown')">Volume Down</input> </p>
+
 	<!-- Column 1 end -->
     </div>
 </div>
