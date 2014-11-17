@@ -9,6 +9,25 @@
 	<meta name="robots" content="index, follow" />
 	<link rel=stylesheet href=css/mobile.css />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>
+	function update_song(){
+		$.getJSON({
+			url:'/api',
+			data:'json='+encodeURIComponent('{"method":"GetSongInfo","id":1}'),
+			method:"get",
+			dataType:"json",
+			success:function(data){
+				$("#title").text(data.song.title + data.song.loved?" <3":"");
+				$("#artist").text(data.song.artist);
+				$("#album").text(data.song.album);
+				$("#albumart").attr("src",data.song.artURL);
+			}
+		});
+	}
+	jQuery(document).ready(function () {
+	setTimeout('update_song()', 5000);
+	});
+	</script>
 </head>
 <body>
 <div id="header">
@@ -29,10 +48,13 @@
 <div class="colmask fullpage">
 	<div class="col1">
 	<!-- Column 1 start -->
-	<div class="displayed">{SONGTITLE} {LOVED} <br />
-	{SONGARTIST}<br />
-	{SONGALBUM}</div>
-	<img class="displayed" src="{SONGARTURL}" width="350" height="350" alt="{ALBUMARTALT}" />
+	<div class="displayed">
+
+	<div id="title">{SONGTITLE} {LOVED}</div>
+	<div id="artist">{SONGARTIST}</div>
+	<div id="album">{SONGALBUM}</div>
+
+	<img class="displayed" id="albumart" src="{SONGARTURL}" width="350" height="350" alt="{ALBUMARTALT}" />
 	<!-- Column 1 end -->
     </div>
 </div>
