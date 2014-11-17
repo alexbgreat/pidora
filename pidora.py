@@ -12,10 +12,7 @@ def process(command, new = False):
 def getSongData(data):
 	if data["songData"] is not None:
 		jsonObj = data["songData"]
-		if jsonObj["title"].find("NPR News") != -1:
-			jsonObj["isSong"] = False
-		else:
-			jsonObj["isSong"] = True
+		jsonObj["isSong"] = True
 		return jsonObj
 	elif "pianobar" in data:
 		if data["pianobar"] is not None:
