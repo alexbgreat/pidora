@@ -119,4 +119,25 @@
         width:100%;
         border-top:1px solid #000;
     }
+
+#title{
+font-weight: bold;
+background-color: cadetblue;
+color: midnightblue;
+font-size: xx-large;
+}
+
+#artist{
+font-weight: bold;
+background-color: lightsteelblue;
+color: dimgrey;
+font-size: large;
+}
+#album{
+font-size: large;
+font-weight: bold;
+background-color: white;
+border-bottom: 2px solid darkslategray;
+}
+
     /* --> */
