@@ -33,14 +33,12 @@
 	});
 
 $(function(){
-  $("input").live('mousedown', function() {
+  $(".btn").live('mousedown', function() {
       this.src = this.src.replace("_off","_on");
-    $(this).toggleClass("on");
 
   });
-    $("input").live('mouseup', function() {
+    $(".btn").live('mouseup', function() {
     this.src = this.src.replace("_on","_off");
-    $(this).toggleClass("on");
 
   });
 });
@@ -66,13 +64,13 @@ $(function(){
 
 	<img class="displayed" id="albumart" src="{SONGARTURL}" width="350" height="350" alt="{ALBUMARTALT}" />
 
-	<p><img src="/imgs/pause_off.png" onclick="$.ajax('/mobile?c=pause')"/>
-	    <img src="/imgs/next_off.png" onclick="$.ajax('/mobile?c=next')"/> 
-	    <img src="/imgs/love_off.png" onclick="$.ajax('/mobile?c=love')"/> 
-	    <img src="/imgs/ban_off.png" onclick="$.ajax('/mobile?c=ban')"/> 
-	    <img src="/imgs/tired_off.png" onclick="$.ajax('/mobile?c=tired')"/> <br/>
-	<img src="/imgs/volup_off.png" onclick="$.ajax('/mobile?c=volumeup')"/> 
-<img src="/imgs/voldn_off.png" onclick="$.ajax('/mobile?c=volumedown')"/> </p>
+	<p><img class="btn" src="/imgs/pause_off.png" onclick="$.ajax('/mobile?c=pause')"/>
+	    <img class="btn" src="/imgs/next_off.png" onclick="$.ajax('/mobile?c=next')"/> 
+	    <img class="btn" src="/imgs/love_off.png" onclick="$.ajax('/mobile?c=love')"/> 
+	    <img class="btn" src="/imgs/ban_off.png" onclick="$.ajax('/mobile?c=ban')"/> 
+	    <img class="btn" src="/imgs/tired_off.png" onclick="$.ajax('/mobile?c=tired')"/> <br/>
+	<img class="btn" src="/imgs/volup_off.png" onclick="$.ajax('/mobile?c=volumeup')"/> 
+<img class="btn" src="/imgs/voldn_off.png" onclick="$.ajax('/mobile?c=volumedown')"/> </p>
 
 	<!-- Column 1 end -->
     </div>
