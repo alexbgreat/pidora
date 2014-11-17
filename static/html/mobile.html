@@ -11,7 +11,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script>
 	function update_song(){
-		$.ajax{
+		$.ajax({
 			url:'/api',
 			data:'json='+encodeURIComponent('{"method":"GetSongInfo","id":1}'),
 			method:"get",
