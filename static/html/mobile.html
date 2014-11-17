@@ -17,7 +17,11 @@
 			method:"get",
 			dataType:"json",
 			success:function(data){
-				$("#title").text(data.song.title + data.song.loved?" <3":"");
+				var title = data.song.title
+				if(data.song.loved){
+					title = title + " <3"
+				}
+				$("#title").text(title);
 				$("#artist").text(data.song.artist);
 				$("#album").text(data.song.album);
 				$("#albumart").attr("src",data.song.artURL);
@@ -25,7 +29,7 @@
 		});
 	}
 	jQuery(document).ready(function () {
-	setTimeout('update_song()', 5000);
+	setInterval('update_song()', 5000);
 	});
 	</script>
 </head>
