@@ -33,7 +33,6 @@
 		});
 	}
 	jQuery(document).ready(function () {
-	update_song()
 	setInterval('update_song()', 5000);
 	});
 
@@ -110,6 +109,8 @@ $(function(){
 			}
 			if(stationList.next != null)
 				getStations(index+1);
+			window.setTimeout(update_song(), 1000);
+
 		});
 	}
 
