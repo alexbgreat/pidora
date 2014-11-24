@@ -120,9 +120,11 @@
     .controlbar{
         position: fixed;
         max-height:25%;
+        min-height:22%;
         bottom:0px;
         width:100%;
         background-color: #d0d0d0;
+        border-top: 2px solid darkslategray;
     }
     .spacer{
         height:25%;
