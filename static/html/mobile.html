@@ -98,7 +98,10 @@ $(function(){
 
 	function getStations(index)
 	{
-		$.get("api", {json:JSON.stringify({"method":"GetStationData", "id":1, "index":index})}).done(function(stationList)
+		$.get("api", {json:JSON.stringify({"method":"GetStationData", "id":1, "index":index})}).done(update_stationlist);
+	}
+
+	function update_stationlist(stationList)
 		{
 			stationList = stationList.stationData;
 			for(var i = 0; i < stationList.stations.length; i++)
@@ -108,10 +111,9 @@ $(function(){
 			}
 			if(stationList.next != null)
 				getStations(index+1);
-			window.setTimeout(update_song(), 1000);
-
-		});
-	}
+			else
+				window.setTimeout(update_song(), 1000);
+		}
 
 	function explainSong()
 	{
