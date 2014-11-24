@@ -52,19 +52,11 @@ def getStations(index):
 	lo = index*10
 	if lo > len(listStations):
 		return dict(error="No stations in that range")
-	if len(listStations) < lo+10:
-		hi = len(listStations)
-	else:
-		hi = lo+10
-	
-	stationList["back"] = index-1 if lo > 0 else None
-	stationList["next"] = index+1 if len(listStations) > hi else None
-	stations = []
+    stations = []
 	for i in range(lo,hi):
 		station = listStations[i].split("=")
 		stations.append(station[1])
 	stationList["stations"] = stations
-
 	return stationList
 
 def Control(command):
