@@ -119,6 +119,12 @@
         width:100%;
         border-top:1px solid #000;
     }
+    .controlbar{
+        top:80%;
+        position: static;
+        bottom: 100%
+        width:100%;
+    }
 
 #title{
 font-weight: bold;
