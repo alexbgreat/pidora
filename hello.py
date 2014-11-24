@@ -19,6 +19,11 @@ class Pidora():
 		reply = pidora.api(self.data, json)
 		return reply["json"]
 
+  @cherrypy.expose
+  def pull(self):
+    os.system("git pull")
+    return ""
+
 	@cherrypy.expose
 	def start(self):
 		if self.data['pianobar'] is None:
