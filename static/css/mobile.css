@@ -120,7 +120,7 @@
     .controlbar{
         position: fixed;
         max-height:25%;
-        min-height:100px;
+        min-height:115px;
         bottom:0px;
         width:100%;
         background-color: #d0d0d0;
