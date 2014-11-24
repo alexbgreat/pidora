@@ -124,7 +124,13 @@
         height:8em;
         bottom:0px;
         width:100%;
-        background-color: darkslategrey;
+        background-color: :#d0d0d0;
+    }
+    .spacer{
+        height:8em;
+    }
+    .btn{
+        height:4em;
     }
 
 #title{
