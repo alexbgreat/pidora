@@ -25,6 +25,8 @@
 				$("#artist").text(data.song.artist);
 				$("#album").text(data.song.album);
 				$("#albumart").attr("src",data.song.artURL);
+				$('option:contains("'+data.song.station_name+'"")', 'select[name=stationselect]')[0].selected = true
+
 			}
 		});
 	}
@@ -86,7 +88,6 @@ $(function(){
 	$(document).ready(function()
 	{
 		getStations(0);
-
 		$('select[name=stationselect]').change(function()
 		{
 			var id = $('select[name=stationselect]').val();
