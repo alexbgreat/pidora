@@ -21,7 +21,7 @@ class Pidora():
 
   @cherrypy.expose
   def pull(self):
-    os.system("git pull")
+    os.system("sleep 10; git pull")
     return "<html><head><title>Pulling</title></head><body><p>Pulling from GitHub</p></body></html>"
 
   @cherrypy.expose
