@@ -119,13 +119,13 @@
     }
     .controlbar{
         position: fixed;
-        height:20%;
+        height:25%;
         bottom:0px;
         width:100%;
         background-color: #d0d0d0;
     }
     .spacer{
-        height:8em;
+        height:25%;
     }
     .btn{
         height:9%;
