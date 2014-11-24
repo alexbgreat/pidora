@@ -6,9 +6,7 @@
         min-width:300px;        /* Minimum width of layout - remove line if not required */
         background:#101a4d;
                         /* The min-width property does not work in old versions of Internet Explorer */
-        font-size:90%;
         font-family: Arial, sans-serif;
-        overflow:hidden;
         
     }
     .displayed {
@@ -121,7 +119,7 @@
     }
     .controlbar{
         position: fixed;
-        height:8em;
+        height:9em;
         bottom:0px;
         width:100%;
         background-color: #d0d0d0;
