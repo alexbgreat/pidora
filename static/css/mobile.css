@@ -125,7 +125,7 @@
         background-color: #d0d0d0;
     }
     .spacer{
-        height:22%;
+        max-height:22%;
     }
     .btn{
         height:10%;
