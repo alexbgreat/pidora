@@ -126,6 +126,7 @@
         width:100%;
         background-color: #d0d0d0;
         border-top: 2px solid darkslategray;
+        text-align: center;
     }
     .spacer{
         height:115px;
