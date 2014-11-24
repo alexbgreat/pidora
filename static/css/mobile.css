@@ -121,8 +121,9 @@
     }
     .controlbar{
         top:80%;
-        position: static;
-        bottom: 100%
+        position: fixed;
+        bottom: 100%;
+        height:20%;
         width:100%;
     }
 
