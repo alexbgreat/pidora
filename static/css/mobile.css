@@ -121,8 +121,8 @@
     }
     .controlbar{
         position: fixed;
-        bottom: 100%;
         height:4em;
+        bottom:0px;
         width:100%;
         background-color: darkslategrey;
     }
