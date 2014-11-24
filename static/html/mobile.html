@@ -92,7 +92,7 @@ $(function(){
 			var id = $('select[name=stationselect]').val();
 			$.get("api", {json:JSON.stringify({"method":"ChangeStation", "id":1, "stationID":id})}).done(function()
 				{
-					window.setTimeout(function(){location.reload();}, 10000);
+					window.setTimeout(update_song(), 1000);
 				});
 		});
 	});
