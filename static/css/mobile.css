@@ -138,6 +138,9 @@
         height:10%;
         min-height: 45px;
     }
+     .ui-select .ui-btn{
+    display : block !important;
+}
 
 #title{
 font-weight: bold;
