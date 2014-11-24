@@ -125,10 +125,11 @@
         background-color: #d0d0d0;
     }
     .spacer{
-        height:25%;
+        height:22%;
     }
     .btn{
         height:10%;
+        min-height: 45px;
     }
 
 #title{
