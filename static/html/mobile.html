@@ -9,6 +9,8 @@
 	<meta name="robots" content="index, follow" />
 	<link rel=stylesheet href=css/mobile.css />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
 	<script>
 	function update_song(){
 		$.ajax({
@@ -46,11 +48,12 @@ $(function(){
 </script>
 </head>
 <body>
-<div id="header">
-	
+<div data-role="header" id="header">
 	<p>
 	<select name="stationselect">
+		<option>Choose a station</option>
 	</select>
+	<img drop
 	</p>
 </div>
 <div class="colmask fullpage">
@@ -61,7 +64,7 @@ $(function(){
 	<div id="title">{SONGTITLE} {LOVED}</div>
 	<div id="artist">{SONGARTIST}</div>
 	<div id="album">{SONGALBUM}</div>
-	<img class="displayed" id="albumart" src="{SONGARTURL}" width="250" height="250" alt="{ALBUMARTALT}" />
+	<img class="displayed" id="albumart" src="" width="250" height="250" alt="" />
 	
 	<div class="spacer"></div>
 	
@@ -114,7 +117,7 @@ $(function(){
 
 	function explainSong()
 	{
-		switch({EXPLANATION})
+		switch(1)
 		{
 			case 1:
 				$.get("api", {json:JSON.stringify({"method":"GetExplanation", "id":1})}).done(function(explain)

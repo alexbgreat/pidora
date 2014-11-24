@@ -5,9 +5,15 @@
         width:100%;
         min-width:300px;        /* Minimum width of layout - remove line if not required */
         background:#101a4d;
+        color:white;
                         /* The min-width property does not work in old versions of Internet Explorer */
         font-family: Arial, sans-serif;
         
+    }
+    select{
+        height:2em;
+        width:100%;
+        background-color:#101a4d;
     }
     .displayed {
         display: block;
