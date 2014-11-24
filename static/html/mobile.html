@@ -27,8 +27,9 @@
 				$("#artist").text(data.song.artist);
 				$("#album").text(data.song.album);
 				$("#albumart").attr("src",data.song.artURL);
-				$("select option:contains"+data.song.station_name).attr('selected', true).siblings('option').removeAttr('selected');
+				$("select option:contains('"+data.song.station_name+"')").attr('selected', true).siblings('option').removeAttr('selected');
 				$("select").selectmenu("refresh", true)
+
 			}
 		});
 	}
