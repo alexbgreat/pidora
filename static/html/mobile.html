@@ -28,6 +28,7 @@
 				$("#album").text(data.song.album);
 				$("#albumart").attr("src",data.song.artURL);
 				$('option:contains("'+data.song.station_name+'")', 'select[name=stationselect]')[0].selected = true
+				$("select").selectmenu("refresh", true)
 
 			}
 		});
