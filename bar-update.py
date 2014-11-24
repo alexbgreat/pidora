@@ -31,9 +31,9 @@ songPlayed = fields["songPlayed"]
 curStation = fields["stationName"]
 
 if event == "songstart" or event == "songexplain":
-	sendRequest(url, "SetSongInfo", buildJSON(title, artist, album, curStation, coverArt, rating, detailUrl))
+	sendRequest(url, "SetSongInfo", buildJSON(title, artist, album,  coverArt, curStation,rating, detailUrl))
 elif event == "songlove":
-	sendRequest(url, "SetSongInfo", buildJSON(title, artist, album, curStation, coverArt, rating, detailUrl))
+	sendRequest(url, "SetSongInfo", buildJSON(title, artist, album, coverArt, curStation,rating, detailUrl))
 elif event == "usergetstations" or event == "stationcreate" or event == "stationdelete" or event == "stationrename":				# Code thanks to @officerNordBerg on GitHub
 	stationCount = int(fields["stationCount"])
 	stations = ""
