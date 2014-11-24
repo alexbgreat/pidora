@@ -22,7 +22,7 @@ class Pidora():
   @cherrypy.expose
   def pull(self):
     os.system("git pull")
-    return ""
+    return "<html><head><title>Pulling</title></head><body><p>Pulling from GitHub</p></body></html>"
 
   @cherrypy.expose
   def start(self):
