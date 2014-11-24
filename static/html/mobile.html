@@ -103,6 +103,7 @@ $(function(){
 
 	function update_stationlist(stationList)
 		{
+			index = stationList.stationData.index;
 			stationList = stationList.stationData;
 			for(var i = 0; i < stationList.stations.length; i++)
 			{
@@ -110,7 +111,7 @@ $(function(){
 					.append($('<option>', { value : index.toString() + i.toString() }).text(stationList.stations[i]));
 			}
 			if(stationList.next != null)
-				getStations(stationList.stationData.index+1);
+				getStations(index+1);
 			else
 				window.setTimeout(update_song(), 1000);
 		}
