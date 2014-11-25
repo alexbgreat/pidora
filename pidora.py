@@ -46,9 +46,9 @@ def getExplanation(data):
     traits = data[0:len(data)-2]
   return "We're playing this track because it features " + ", ".join(traits) + ", and " + ending +"."
 
-def getStations(index):
+def getStations():
   listStations = open(current_dir + "stationList").read().split("|")
-  stationList = dict(index=index)
+  stationList = dict()
   stations = []
   for i in listStations:
     station = listStations[i].split("=")
@@ -114,7 +114,7 @@ def api(data, json=None):
   elif json["method"] == "GetExplanation":
     replyJSON = libjson.dumps(dict(method="GetExplanation", id=json["id"], explanation=getExplanation(data)), indent=2)
   elif json["method"] == "GetStationData":
-    replyJSON = libjson.dumps(dict(method="GetStationList", id=json["id"], stationData=getStations(json["index"])), indent=2)
+    replyJSON = libjson.dumps(dict(method="GetStationList", id=json["id"], stationData=getStations()), indent=2)
   elif json["method"] == "Control":
     if Control(json["command"]):
       replyJSON = libjson.dumps(dict(method="Control", id=json["id"], command=json["command"], response="ok"), indent=2)
