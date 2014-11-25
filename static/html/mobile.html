@@ -95,7 +95,7 @@ $(function(){
 			for(var i = 0; i < stationList.stations.length; i++)
 			{
 				$('select[name=stationselect]')
-					.append($('<option>', { value : index.toString() + i.toString() }).text(stationList.stations[i]));
+					.append($('<option>', { value : i.toString() }).text(stationList.stations[i]));
 			}
 			window.setTimeout(update_song(), 1000);
 		}
