@@ -51,7 +51,7 @@ def getStations():
   stationList = dict()
   stations = []
   for i in listStations:
-    station = listStations[i].split("=")
+    station = i.split("=")
     stations.append(station[1])
   stationList["stations"] = stations
   return stationList
