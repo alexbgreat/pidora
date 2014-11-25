@@ -49,7 +49,7 @@ def getExplanation(data):
 def getStations(index):
   listStations = open(current_dir + "stationList").read().split("|")
   stationList = dict(index=index)
-    stations = []
+  stations = []
   for i in listStations:
     station = listStations[i].split("=")
     stations.append(station[1])
