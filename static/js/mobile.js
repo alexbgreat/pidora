@@ -34,14 +34,6 @@
 		}
 	}
 		getStations(0);
-		$('select[name=stationselect]').change(function()
-		{
-			var id = $('select[name=stationselect]').val();
-			$.get("api", {json:JSON.stringify({"method":"ChangeStation", "id":1, "stationID":id})}).done(function()
-				{
-					window.setTimeout(update_song(), 1000);
-				});
-		});
 
 
 	function update_song(){
@@ -65,9 +57,7 @@
 	}
 	jQuery(document).ready(function () {
 	setInterval('update_song()', 5000);
-	});
 
-$(function(){
   $(".btn").live('click', function() {
       this.src = this.src.replace("_off","_on");
       setTimeout(function(t){
@@ -75,4 +65,17 @@ $(function(){
       setTimeout(update_song(),1000);
   })
 
-  });
+
+	$('select[name=stationselect]').change(function()
+{
+	var id = $('select[name=stationselect]').val();
+	$.get("api", {json:JSON.stringify({"method":"ChangeStation", "id":1, "stationID":id})}).done(function()
+		{
+			window.setTimeout(update_song(), 1000);
+		});
+});
+
+
+	});
+
+
